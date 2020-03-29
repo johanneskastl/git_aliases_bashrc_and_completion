@@ -1,4 +1,9 @@
 ##################################################################################
+# source file containing your aliases
+#
+source "$HOME/.alias"
+
+##################################################################################
 # source bash-completion for git
 #
 if [ -s /etc/bash_completion.d/git.sh ]
