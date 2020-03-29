@@ -1,0 +1,13 @@
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch -vv
+	fs = !git fetch --all && git status && git merge --ff-only
+	fe = fetch --all
+	pl = pull
+	ps = push
+	re = rebase
+	cp = cherry-pick
+	lol = log --oneline --graph --decorate
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
