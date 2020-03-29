@@ -1,0 +1,50 @@
+##################################################################################
+# Define colors for
+#
+GREEN='\[\e[01;32m\]'
+BLUE='\[\e[01;34m\]'
+RED='\[\e[01;31m\]'
+VIOLET='\[\e[00;35m\]'
+WHITE='\[\e[01;0m\]'
+
+
+if [ -e /etc/bash_completion.d/git-prompt.sh ]
+then
+
+    ##################################################################################
+    # source git prompt bash completion file
+    #
+    source /etc/bash_completion.d/git-prompt.sh
+
+    ##################################################################################
+    # show git prompt in git-repositories only
+    #
+    export GIT_PROMPT_ONLY_IN_REPO=1
+ 
+    ##################################################################################
+    # Show git state (modified files, ...) in prompt
+    #
+    export GIT_PS1_SHOWDIRTYSTATE=1
+
+    ##################################################################################
+    # Show git stash state in prompt
+    #
+    export GIT_PS1_SHOWSTASHSTATE=1
+ 
+    ##################################################################################
+    # Set prompt variable PS1 using git prompt
+    #
+    export PS1="${GREEN}\u${WHITE}@${RED}\h${WHITE}:${BLUE}\$(pwd)${VIOLET}\$(__git_ps1 \" (%s)\")${BLUE}>${WHITE}"
+    export PS2="> "
+
+else
+
+    ##################################################################################
+    # Set prompt variable PS1 without git prompt
+    #
+    export PS1="${GREEN}\u${WHITE}@${RED}\H${WHITE}:${BLUE}\$(pwd)>${WHITE}"
+    export PS2="> "
+
+fi
+
+
