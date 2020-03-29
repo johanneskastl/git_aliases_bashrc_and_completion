@@ -1,0 +1,44 @@
+##################################################################################
+# source bash-completion for git
+#
+if [ -s /etc/bash_completion.d/git.sh ]
+then
+
+    ##############################################################################
+    # source git bash completion file
+    #
+    . /etc/bash_completion.d/git.sh
+
+    ##############################################################################
+    # set bash_completion for git aliases
+    #
+    __git_complete g _git
+    __git_complete g. _git
+    __git_complete ga _git_add
+    __git_complete ga. _git_add
+    __git_complete gap _git_add
+    __git_complete gbr _git_branch
+    __git_complete gbra _git_branch
+    __git_complete gbrd _git_branch
+    __git_complete gci _git_commit
+    __git_complete gcia _git_commit
+    __git_complete gcim _git_commit
+    __git_complete gco _git_checkout
+    __git_complete gcob _git_checkout
+    __git_complete gcp _git_cherry_pick
+    __git_complete gd _git_diff
+    __git_complete gd. _git_diff
+    __git_complete gm _git_merge
+    __git_complete gme _git_merge
+    __git_complete gmff _git_merge
+    __git_complete gmnf _git_merge
+    __git_complete gdc _git_diff
+    __git_complete gpdo _git_push
+    __git_complete gp _git_push
+    __git_complete gpu _git_push
+    __git_complete gre _git_rebase
+    __git_complete grem _git_rebase
+    __git_complete grei _git_rebase
+    __git_complete greim _git_rebase
+fi
+
